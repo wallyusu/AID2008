@@ -1,0 +1,40 @@
+王伟超 wangweichao@tedu.com 备注：班级-姓名-代码
+
+
+第四阶段课程介绍
+总时长：13个工作日
+爬虫7天
+Hadoop （3天） : java编写的大数据分析工具
+数据结构3天
+
+1. 爬虫：综合、不确定性
+    第一阶段：MySQL\MongoDB\Redis\re\多线程
+    多进程\进程锁\队列\HTML\JavaScript...
+
+2. Hadoop:  抽象 分布式存储、计算
+数据结构： 抽象
+
+3. 爬虫分类
+    通用网络爬虫-搜索引擎，需要遵守robots协议
+    ROBOTS协议：往后咱通过ROBOTS协议告诉搜索引擎那些页面可以抓取，那些页面不能抓（君子协议）
+    聚焦网络爬虫
+
+4. 请求模块-requests
+    resp = requests.get(url='',header={})
+    响应对象属性
+        text:响应内容 - 字符串
+        content: 响应内容 - bytes
+        status_code: HTTP响应码
+        url: 返回实际数据的URL地址
+5. 编码模块-urllib.parse
+    urlencode({})  # 内放字典
+    quote('')
+    unquote('')
+6. 解析模块-re
+    6.1 使用流程：r_list = re.findall(regex,html,re.S)
+    6.2 正则分组：需要抓取什么数据就加(.*?)
+        情况1：[] 要么是正则问题，要么是响应问题
+        情况2： ['','',...] 正则中一个分组
+        情况3： [(),(),...] 正则中多个分组
+
+
