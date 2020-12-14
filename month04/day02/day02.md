@@ -860,8 +860,8 @@ if __name__ == '__main__':
 ### **2.1 MongoDB介绍**
 
 ```
-【1】MongoDB为非关系型数据库,基于key-value方式存储
-【2】MongoDB基于磁盘存储,而Redis基于内存
+【1】MongoDB为非关系型数据库,基于key-value方式存储（与redis相同）
+【2】MongoDB基于磁盘存储（同mysql）,而Redis基于内存
 【3】MongoDB数据类型单一,就是JSON文档
 	MySQL数据类型:数值类型、字符类型、枚举类型、日期时间类型
 	Redis数据类型:字符串、列表、哈希、集合、有序集合
@@ -871,6 +871,17 @@ if __name__ == '__main__':
 	MongoDB：库 - 集合 - 文档
 【5】特性
 	MongoDB无需提前建库建集合,直接使用即可,会自动创建
+【6】mySQL和MongeDB对比
+	mysql 查询比较慢，进行查询语句时，会通过笛卡尔积计算，反复筛选，从中选择需要的数据
+	MongoDB容易产生数据冗余
+	
+默认端口：
+mysql:3306
+redis:6379
+redis-sentinel:26379
+mongodb:27017
+http:80
+https:443
 ```
 
 ### **2.2 MongoDB常用命令**
@@ -1335,7 +1346,7 @@ XPath即为XML路径语言，它是一种用来确定XML文档中某部分位置
 
 ## **7. 今日作业**
 
-```python
+```
 【1】正则抓取豆瓣图书top250书籍信息
 	地址：https://book.douban.com/top250?icn=index-book250-all
     抓取目标：书籍名称、书籍信息、书籍评分、书籍评论人数、书籍描述
@@ -1346,5 +1357,20 @@ XPath即为XML路径语言，它是一种用来确定XML文档中某部分位置
     书籍评分：
     评论人数：
     书籍描述：
+    
+【3】瓜子二手车二级页面数据抓取
+	url地址：
+    一级页面：汽车详情页的连接（注意url地址的拼接）
+    二级页面：汽车名称、行驶里程、排量、变速箱、价格
+    要求：
+    	1.做成增量爬虫（Redis中集合）
+        2.新更新的汽车在最前面位置（一旦检查到第一辆已经抓取过的汽车，则退出程序 sys.exit())
+        3.所抓数据存入MySQL数据库|MongoDB数据库
+    注意：
+    	瓜子二手车检查了Cookie,在headers中添加Cookie和User-Agent
+    	headers = {'Cookie':'','User-Agent':''}
+   	提示：
+   		抓取Cookie:
+   		F12-Network-刷新页面找到buy/数据包-Headers-Request Headers-里面有Cookie和User-Agent
 ```
 
