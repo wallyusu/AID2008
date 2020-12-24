@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f926fea9-cdc3-4c8f-a9f4-2df9da1c156e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1llfTmxvNDcpWekvAP1vDindHRM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../day07" />
+  </component>
+  <component name="RunManager" selected="Python.run (1)">
+    <configuration name="baidu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="day06" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baidu/Baidu/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baidu/Baidu/spiders/baidu.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="guazi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="day06" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Guazi/Guazi/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Guazi/Guazi/spiders/guazi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="day06" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Guazi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Guazi/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="day06" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baidu" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baidu/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="day06" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Guazi/Guazi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Guazi/Guazi/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run (1)" />
+        <item itemvalue="Python.guazi" />
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.baidu" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f926fea9-cdc3-4c8f-a9f4-2df9da1c156e" name="Default Changelist" comment="" />
+      <created>1608176608755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608176608755</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="717" y="310" key="FileChooserDialogImpl" timestamp="1608254915284">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="717" y="310" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1608254915284" />
+    <state width="1827" height="330" key="GridCell.Tab.0.bottom" timestamp="1608205215568">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="330" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1608205215568" />
+    <state width="1827" height="330" key="GridCell.Tab.0.center" timestamp="1608205215567">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="330" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1608205215567" />
+    <state width="1827" height="330" key="GridCell.Tab.0.left" timestamp="1608205215566">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="330" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1608205215566" />
+    <state width="1827" height="330" key="GridCell.Tab.0.right" timestamp="1608205215568">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="330" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1608205215568" />
+    <state width="1827" height="209" key="GridCell.Tab.1.bottom" timestamp="1608204321906">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="209" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1608204321906" />
+    <state width="1827" height="209" key="GridCell.Tab.1.center" timestamp="1608204321899">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="209" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1608204321899" />
+    <state width="1827" height="209" key="GridCell.Tab.1.left" timestamp="1608204321899">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="209" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1608204321899" />
+    <state width="1827" height="209" key="GridCell.Tab.1.right" timestamp="1608204321900">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1827" height="209" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1608204321900" />
+    <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1608204260843">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="926" height="527" key="XDebugger.FullValuePopup/67.27.1853.1053@67.27.1853.1053" timestamp="1608204260843" />
+    <state x="522" y="291" width="932" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608204149570">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="522" y="291" width="932" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1053@67.27.1853.1053" timestamp="1608204149570" />
+    <state x="633" y="257" width="719" height="678" key="search.everywhere.popup" timestamp="1608195075924">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="633" y="257" width="719" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608195075924" />
+  </component>
+</project>

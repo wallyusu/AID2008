@@ -1259,7 +1259,7 @@ XPath即为XML路径语言，它是一种用来确定XML文档中某部分位置
 """
 匹配猫眼电影top100：https://maoyan.com/board/4
 """
-【1】查找所有的dd节点
+【1】查找所有的dd节点（后代节点）  # //为后代节点  /为子节点  即//能匹配里面所有d标签
     //dd
 【2】获取所有电影的名称的a节点: 所有class属性值为name的a节点
     //p[@class="name"]/a
@@ -1332,9 +1332,9 @@ XPath即为XML路径语言，它是一种用来确定XML文档中某部分位置
 - **课堂练习**
 
   ```python
-  【1】匹配汽车之家-二手车,所有汽车的链接 : 
-      //li[@class="cards-li list-photo-li"]/a[1]/@href
-      //a[@class="carinfo"]/@href
+  【1】匹配瓜子二手车,所有汽车的链接 : 
+      //ul[@class='carlist clearfix js-top']//a/@href
+      
   【2】匹配汽车之家-汽车详情页中,汽车的
        2.1)名称:  //div[@class="car-box"]/h3/text()
        2.2)里程:  //ul/li[1]/h4/text()
@@ -1352,10 +1352,10 @@ XPath即为XML路径语言，它是一种用来确定XML文档中某部分位置
     抓取目标：书籍名称、书籍信息、书籍评分、书籍评论人数、书籍描述
     
 【2】使用xpath helper在页面中匹配豆瓣图书top250的信息，写出对应的xpath表达式
-    书籍名称：
-    书籍信息：
+    书籍名称：//table//div[@class='pl2']/a/@title
+    书籍信息：//table//p[@class='pl']
     书籍评分：
-    评论人数：
+    评论人数：//table//span[@class='pl']
     书籍描述：
     
 【3】瓜子二手车二级页面数据抓取

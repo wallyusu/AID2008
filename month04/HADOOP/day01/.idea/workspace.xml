@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3553dd14-a84c-43ca-8c11-f44cd0a38104" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1lzTnvOp3VurvxMDB6BTQg9uqpj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../day02" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3553dd14-a84c-43ca-8c11-f44cd0a38104" name="Default Changelist" comment="" />
+      <created>1608599089239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608599089239</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="541" y="351" width="894" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608599116077">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="541" y="351" width="894" height="402" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1608599116077" />
+    <state x="717" y="310" key="FileChooserDialogImpl" timestamp="1608620645676">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="717" y="310" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1608620645676" />
+  </component>
+</project>
