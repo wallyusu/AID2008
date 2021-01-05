@@ -1,3 +1,4 @@
+# 配置缓存项
 CACHES = {
     "default": {
             "BACKEND": "django_redis.cache.RedisCache",

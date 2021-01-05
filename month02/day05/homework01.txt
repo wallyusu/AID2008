@@ -1,0 +1,24 @@
+作业：
+1.数据库数据表 insert select 语句要熟练
+2.创建一个数据库 books 使用utf8编码
+  在该数据库中创建数据表 book
+  id 书名 作者 出版社 价格 备注
+  插入若干数据 >= 8条
+  作者：老舍 鲁迅...
+  价格：30-120之间
+  出版社：中国文学 机械工业 人民教育...
+
+3.查询练习
+
+1. 查找30多元的图书
+select * from book where price>30;
+２．查找人民文学出版社出版的图书
+select * from book where press='人民文学出版社';
+３．查找鲁迅写的，人民文学出版社出版的图书
+select * from book where author='鲁迅' and press='人民文学出版社';
+４．查找备注不为空的图书
+select * from book where remark is not null;
+５．查找价格超过６０元的图书，只看书名和价格
+select name,price from book where price>60;
+６．查找鲁迅写的或者茅盾写的图书
+select * from book where author='鲁迅' or author='三毛';

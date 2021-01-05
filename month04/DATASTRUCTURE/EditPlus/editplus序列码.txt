@@ -1,0 +1,5 @@
+username:xiaohong
+regcode:C2B61-A1080-18F60-947FE-DED3E
+
+username:xiaoming
+regcode:4CC6E-A1F70-4BF88-4C95A-302EF

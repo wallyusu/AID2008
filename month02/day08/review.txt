@@ -1,0 +1,36 @@
+前情回顾
+
+1.外键约束
+    作用
+    * 有时候有关系的数据无法存放在一个表中，会冗余
+    * 拆字段,分多个表存储,降低了冗余
+    * 建立关系字段表达表之间的数据关系
+    * 为了约束关系字段,建立外键
+
+    constraint [外键名]
+    foreign key [外键字段]
+    references 主表(主键)
+    [级联动作]
+
+    alter table [tb] drop foreign key [fk_name];
+
+    show create table [tb]
+
+    外键优缺点：
+    影响数据整体迁移,复制,拆分速度
+
+2.表关系设计
+    一对一     一对多     多对多
+
+    E-R
+
+3.多表的关联查询
+    select col... from tb1,tb2,tb3... where...
+    select col from tb1 inner join tb2 on ... where...
+    select col from tb1 left/right tb2 on ... where...
+    同时关联多个表：
+    select col...
+    from tb1 left join tb2 on tb1.a=tb2.b
+    left join tb3 on tb1.c=tb3.d
+    left join ...
+    where...

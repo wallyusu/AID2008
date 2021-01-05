@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../day05/.idea/day05.iml" filepath="$PROJECT_DIR$/../day05/.idea/day05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/day06.iml" filepath="$PROJECT_DIR$/.idea/day06.iml" />
+      <module fileurl="file://$USER_HOME$/下载/ddblog_code_3/.idea/ddblog_code_3.iml" filepath="$USER_HOME$/下载/ddblog_code_3/.idea/ddblog_code_3.iml" />
+    </modules>
+  </component>
+</project>

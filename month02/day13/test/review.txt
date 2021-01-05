@@ -1,0 +1,49 @@
+前情回顾
+
+1. 数据库优化
+   * 键的选择
+   * sql语句的优化
+   * 表的拆分
+
+2. 数据库的备份
+   表： create table [tb] [select..]
+   库备份： mysqldump --> sql文件
+
+3. 数据库远程访问和权限管理
+
+    create user
+    drop user
+    revoke
+
+4.pymysql 操作数据库
+
+  db = pymysql.connect()
+  cur = db.cursor()
+
+  cur.execute() 执行sql语句
+  执行了读： cur.fetchone()
+            cur.fetchmany()
+            cur.fetchall()
+
+  执行写操作且不支持事务： over
+  执行写操作且支持事务： db.commit()
+                     db.rollback()
+
+  cur.close()
+  db.close()
+
+数据管理
+
+文件处理
+    文件读写：   open()     read()      write()      重点
+    正则表达式： re 模块    正则表达式规则
+
+数据库处理
+    mysql: 基础语句：   建库建表，增删改查
+           提高语句：   高级查询 聚合查询 外键创建
+           意识流：     索引  表的关系建立
+           视图   存储过程    数据表优化   数据库备份
+
+    pymysql: 基本操作流程
+
+    面试话术：能够熟练使用数据库，进行数据建设和设计

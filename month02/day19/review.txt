@@ -1,0 +1,14 @@
+前情回顾
+
+1.项目开发流程
+2.GIT
+    概述
+    GIT基本命令： add/mv/rm commit status log
+    版本管理： reset reflog tag
+    分支管理：branch checkout merge
+
+3.GitHub
+    获取项目 地址：https   ssh
+    git clone xxxxxx
+
+

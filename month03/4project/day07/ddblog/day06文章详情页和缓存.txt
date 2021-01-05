@@ -1,0 +1,46 @@
+一 day05回顾
+    1. 在Django中使用Celery
+        1.1 在与setting.py的同一个目录下添加celery.py文件
+              设置环境变量、创建并配置Celery、设置自动查找任务函数。
+        1.2 在应用下创建tasks.py文件
+              编写任务函数
+        1.3 在视图函数中
+              相当于生产者， 任务函数.delay(),向消息队列中推送任务。
+        1.4 启动消费者
+        整个操作中，使用到了redis，确保redis服务器正常运行。
+    2. 进入文章模块
+        2.1 创建模型类，生成迁移文件，并同步到数据库
+        2.2 根据用户url，找到相关的页面，分析页面，主要考虑前后端交互的
+              部分
+        2.3 根据前端请求的url，编写视图函数或者视图类，一般视图函数或类
+              中的方法返回Json格式的数据。
+        2.4 具体功能
+              2.4.1 发表文章
+              2.4.2 文件列表
+              2.4.3 文件详情
+              文件列表和文章详情对应的是同一个get方法。
+二 day06
+     1、实现文章详情页
+          1.1 前端提交请求的url 
+                GET -> http://127.0.0.1:8000/v1/topics/tedu?t_id=1
+          1.2 上一页/下一页 如何实现
+               
+                    1   2   3   4   5   6   7   8   9  10   11 12
+
+           张三:  1    5   【8】   9  11   12
+           sql: select * from topic_topic  where id>8 and user_profile_id ='张三'
+                 order by id ASC  limit 1 
+           orm: next_topic = Topic.objects.filter(id__gt=8,user_profile_id='张三').first()
+            
+                select * from topic_topic  where id <8 and user_profile_id ='张三'
+                 order by id Desc limit 1   
+           orm:last_topic = Topic.objects.filter(id__lt=8,user_profile_id='张三').last()
+      2、缓存
+           
+           
+           
+            
+
+          
+          
+ 

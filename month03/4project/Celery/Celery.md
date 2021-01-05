@@ -84,6 +84,7 @@ task_test.delay()  # delay将任务扔到队列里
 ```python
 #创建 tasks_result.py
 from celery import Celery
+import time
 app = Celery('demo',
              broker='redis://@127.0.0.1:6379/1',
              backend='redis://@127.0.0.1:6379/2',
@@ -93,13 +94,14 @@ app = Celery('demo',
 @app.task
 def task_test(a, b):
     print("task is running")
+    time.sleep(10)
     return a + b
 ```
 
 tasks_result.py 同级目录终端中-启动celery worker 
 
 ```shell
-celery -A tasks_result worker --loglevel=info
+celery -A tasks_result worker --loglevel=info  # loglevel=info为日志级别
 ```
 
 ![1572966007255](images\1572966007255.png)

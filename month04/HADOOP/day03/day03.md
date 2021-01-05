@@ -1639,18 +1639,21 @@ select goods_click,goods_id from product_tab order by goods_click;
    【3】实现
    3.1) 女性当中评分最高的10部电影
    create table result2_F as
-   select 'F' as sex, b.name as name,  avg(c.rating) as avgrate 
+   select 'F' as gender, b.name as name,  avg(c.rating) as avgrate 
    from t_rating c join t_user a on c.user_id=a.user_id
-   join t_moive b on c.moive_id=b.movie_id
+   join t_movie b on c.movie_id=b.movie_id
    where a.gender='F'
    group by b.name order by avgrate desc 
    limit 10;
    
+   
+   
+   
    3.2) 男性当中评分最高的10部电影
    create table result2_M as
-   select 'M' as sex, b.name as name,  avg(c.rating) as avgrate 
+   select 'M' as gender, b.name as name,  avg(c.rating) as avgrate 
    from t_rating c join t_user a on c.user_id=a.user_id
-   join t_moive b on c.moive_id=b.movie_id
+   join t_movie b on c.movie_id=b.movie_id
    where a.gender='M'
    group by b.name order by avgrate desc 
    limit 10;

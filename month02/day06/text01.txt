@@ -1,0 +1,20 @@
+数据类型：
+    数字  tinyint int float  bit
+    字符串 char varchar enum set text
+
+字段约束：
+    not null
+    default [val]
+    unsigned
+    primary key auto_increment
+    comment [msg]
+
+create table [tb] (col type 约束,...);
+show tables;
+desc [tb];
+show create table [tb];
+drop table [tb];
+
+数据操作 (增删改查)
+    增加： insert into [tb] (col,...) values(val,...),(val,...)...;
+    查询： select col,... from [tb] [where..] 条件

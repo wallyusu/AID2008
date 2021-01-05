@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../month04/day03/.idea/day03.iml" filepath="$PROJECT_DIR$/../../month04/day03/.idea/day03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../month04/day04/.idea/day04.iml" filepath="$PROJECT_DIR$/../../month04/day04/.idea/day04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../month03/4project/day07/ddblog/.idea/ddblog.iml" filepath="$PROJECT_DIR$/../../month03/4project/day07/ddblog/.idea/ddblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/newblog.iml" filepath="$PROJECT_DIR$/.idea/newblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../project_client/.idea/project_client.iml" filepath="$PROJECT_DIR$/../project_client/.idea/project_client.iml" />
+    </modules>
+  </component>
+</project>

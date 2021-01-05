@@ -1,0 +1,57 @@
+一、 day06的项目回顾
+    1. 在Django中使用Celery
+        1.1 在settings.py的同目录下添加celery.py文件
+        在设置环境变量、创建并配置celery，设置自动查找任务函数。
+        1.2 在应用下创建tasks.py的文件
+            编写消费者任务函数
+        1.3 在视图函数中
+            相当于生产者，任务函数，delay()，向消息队列中推送任务。
+        1.4 启动消费者
+            整个操作中，使用到了redis,确保redis服务器正常运行
+    2. 进入文章模块 （也可以作为以后在公司部分的项目考虑方式）
+        2.1 创建模型类，生成迁移文件，并且同步到数据库
+        2.2 根据用户url,找到相关的页面，分析页面，主要考虑前后端交互的部分
+        2.3 根据前端的请求的url，编写视图函数或者视图类，一般视图函数或者视图类的方法返回json格式的数据
+        2.4 具体功能
+            2.4.1 发表文章
+            2.4.2 读取文件列表
+            2.4.3 文章详情页面
+            文章列表和文章详情对应的是同一个get方法！（只是通过if判断t_id是否存在从而知道请求的是哪个）
+
+    settints中设置时区的问题：
+    # 如果这个为True,表示在数据库中写入是标准时间，Django的模板页中
+    # 根据配置文件中的时区设置，自动的计算当前的时区（格林尼治）的时间
+    # 如果这个为False,表示在数据库中写入的就是当前时区的时间，
+    # 前后端分离后，不再使用Django模板，所以选择的是False
+    USE_TZ = False # 不使用格林尼治时间，使用当前时间（相差8小时）
+
+二、 day06
+    1. 实现文章详情页
+        1.1 前端提交的url:通过GET方式请求
+        'http://127.0.0.1:8000/v1/topics/'+blog_username+'?t_id='+t_id
+        1.2 上一页/下一页如何实现
+        1 2 3 4 5 6 7 8 9 10 11 12
+        张三：1 5 【8】 9 11 12
+        mysql语句的表达形式/orm的表达形式（orm自动默认升序排列）
+        # 下一页
+        sql:select * from topic_topic where id > 8 and user_profile_id='张三'
+        order by id limit 1
+        orm:next_topic=Topic.objects.filter(id_gt=8,user_profile_id='张三').first()
+        # 上一页
+        sql:select * from topic_topic where id < 8 and user_profile_id='张三'
+        order by id desc limit 1
+        orm:last_topic=Topic.objects.filter(id_lt=8,user_profile_id='张三'),last()
+    2. 缓存
+        2.1 方案一 直接使用Django提供的cache_page整体缓存
+            问题：如果我缓存的是博主访问的博客列表。这时，其他人在访问时，由于缓存中有数据，返回缓存数据。
+            这与我们的权限设置相违背。
+        2.2 方案二 我们自己编写装饰器做缓存操作
+            1. 权限： 公开、个人    [两种情况]
+            2. 分类： 技术、非技术   [三种情况]
+                tedu/topics?category='tec'
+                tedu/topics?category='no-tec'
+                request.get_full_path()
+            两者排列组合是[六种情况]，对应的就要有六种情况的缓存。
+        2.3 数据一致性问题
+            数据发生变更后（删除、添加、修改），删除缓存。
+            因为是我们自己定义的键，方便的在需要时，清除缓存。

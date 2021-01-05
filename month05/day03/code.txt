@@ -1,0 +1,7 @@
+sudo pip3 install -i https://pypi.douban.com/simple/ jupyter_contrib_nbextensions
+
+jupyter contrib nbextension install --user
+
+
+windows是下面链接
+https://blog.csdn.net/qifeidemumu/article/details/88987390

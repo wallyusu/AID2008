@@ -1,0 +1,88 @@
+一、 day04 回顾
+    1. 接入第三方的短信验证功能
+    2. redis操作【redis是内存型数据库，有过期键功能】
+       在项目中，操作redis时,键的设置不宜过长也不宜过短。
+       2.1 python操作redis
+           操作灵活，但是不支持序列化
+           c++适合做底层开发
+           python开发速度快，效率高，有很多的库可以被使用.如有影响性能的一些功能可以让c++去开发，然后嵌入python
+       2.2 Django操作redis
+           支持序列化[在获取时相对比较简单]
+           cache.set/get
+    3. Celery - 分布式异步队列（生产者消费者模式）
+       用来管理队列的框架（管理队列可以灵活切换），本身并不是队列
+二、 day05
+    1. 将短信验证、celery项目接入到博客项目red
+       1.1 在与settings.py相同的目录下去创建celery.py
+       1.2 在应用user目录下，添加tasks.py,在模块中编写任务函数
+       1.3 修改应用user的views模块，把同步换成异步代码
+    2. 启动消费者进程前，首先确保redis服务正常启动：
+       sudo /etc/init.d/redis-server start
+       sudo /etc/init.d/redis-sentinel stop
+       如果6379不能正常提供服务，换个端口。
+       1. [创建celery对象，队列配置]
+       2. setting.py的缓存设置
+    3. 文章模块
+       3.1 创建topic 应用
+           python3 manage.py startapp topic
+       3.2 创建模型类 Topic
+       3.3 生成迁移文件，并且同步到数据库
+           python3 manage.py makemigrations
+           python3 manage.py migrate
+       3.4 发表博客
+           3.4.1 用户url:http://127.0.0.1:5000/tedu/topic/release
+           3.4.2 分析release.html页面，采用js拼接页面
+                 1> 从本地存储获取token和username
+                 2> 发送get请求，请求的url:
+                    url:"http://127.0.0.1:8000/v1/users/"+ username,
+                 3> 获取指定用户信息，拼接页面。
+                    用到一个富文本框，带格式和其他插件功能。我们使用的是wangEditor,免费。
+                    对用户输入的数据做转义。
+                    var content = editor.txt.html() # 带标签格式的内容
+                    var content_text = editor.txt.text() # 不带标签格式的纯文本
+                    content_text 主要是为了截取保存文章简介服务的。
+                 4> 拼接页面时，实现提交按钮的click时间，发送post请求
+                    url:"http://127.0.0.1:8000/v1/topics/" + username,
+                    实现的功能就是发布文章，发布成功后，跳转到这个用户的文章列表页面。
+       3.5 http://127.0.0.1:5000/tedu/topics 这是文章列表页的用户url
+           对应的页面list.html,分析该页面
+           3.5.1 从本地存储中获取token和username
+           3.5.2 从url中获取用户名：blog_username
+           3.5.3 发送get请求，
+                 url是："http://127.0.0.1:8000/v1/topics/"+ blog_username;
+           3.5.4 添加get方法处理get请求
+           3.5.5 在login_dec.py文件中创建获取用户的函数【从token中获取】
+       3.6 功能完成后的测试 【权限问题】
+           1. 登录tedu用户，用户列表的url中也是tedu。博主访问自己
+              结果 private + public 文章
+           2. 登录tedu2,用户列表的url中是tedu。登录用户访问其他用户
+           3. 将本地存储的登录信息删除，用户列表的url中是tedu.游客访问
+              2和3的结果是public文章
+       3.7 分类问题：
+           技术和非技术，通过查询字符串分类的
+           url:http://127.0.0.1:8000/v1/topics/tedu
+               http://127.0.0.1:8000/v1/topics/tedu?category = tec  # 技术
+               http://127.0.0.1:8000/v1/topics/tedu?category = no-tec  # 非技术
+       3.8 文章详情页
+           用户url:http://127.0.0.1:5000/ade/topics/detail/1
+           页面：detail.html,分析该页面
+           1> 从本地存储中获取token和username (谁访问)
+           2> 从url中获取用户名blog_username (访问谁的博客)
+           3> 前端向后端发的url:
+              "http://127.0.0.1:8000/v1/topics/" + blog_username + '?t_id=' + t_id
+              请求获取某个用户的某一篇文章
+              http://127.0.0.1:8000/v1/topics/tedu?t_id=id
+              发get请求
+           4> 对应的get方法
+              a. http://127.0.0.1:8000/v1/topics/tedu
+                 返回某个用户所有文章列表
+              b. http://127.0.0.1:8000/v1/topics/tedu?category=tec
+                 返回某个用户指定类型的文章列表
+              c. http://127.0.0.1:8000/v1/topics/tedu?t_id=1
+                 返回某个用户指定id的文章
+              def get(request...):
+                 t_id = request.GET.get('t_id')
+                 if t_id:
+                    # 返回文章详情页，明天要实现
+                 else:
+                    # 文章列表页，今天已经实现的
